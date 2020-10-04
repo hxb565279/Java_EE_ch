@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    <!--1.目标类-->
+    <bean id="userDao" class="com.hxb.jdk.UserDaoImpl"/>
+    <!--2切面类-->
+    <bean class="com.hxb.factorybean.MyAspect" id="myAspect"/>
+    <!--3spring代理工厂-->
+    <bean class="org.springframework.aop.framework.ProxyFactoryBean" id="userDaoProxy">
+        <property name="proxyInterfaces" value="com.hxb.jdk.UserDao"/>
+        <property name="target" ref="userDao"/>
+        <property name="interceptorNames" value="myAspect"/>
+        <property name="proxyTargetClass" value="true"/>
+    </bean>
+</beans>

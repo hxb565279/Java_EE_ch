@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="ch06:ear exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/ch06_ear_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="ch06/javaeeApplication/javaEEApplication" />
+      <element id="directory" name="web.war">
+        <element id="artifact" artifact-name="ch06:war exploded" />
+      </element>
+      <element id="directory" name="lib">
+        <element id="file-copy" path="J:/源代码/chapter06/WebContent/WEB-INF/lib/asm-5.1.jar" />
+        <element id="file-copy" path="J:/源代码/chapter06/WebContent/WEB-INF/lib/ant-1.9.6.jar" />
+        <element id="file-copy" path="J:/源代码/chapter06/WebContent/WEB-INF/lib/cglib-3.2.4.jar" />
+        <element id="file-copy" path="J:/源代码/chapter06/WebContent/WEB-INF/lib/ognl-3.1.12.jar" />
+        <element id="file-copy" path="J:/源代码/chapter06/WebContent/WEB-INF/lib/log4j-1.2.17.jar" />
+        <element id="file-copy" path="J:/源代码/chapter06/WebContent/WEB-INF/lib/log4j-api-2.3.jar" />
+        <element id="file-copy" path="J:/源代码/chapter06/WebContent/WEB-INF/lib/mybatis-3.4.2.jar" />
+        <element id="file-copy" path="J:/源代码/chapter06/WebContent/WEB-INF/lib/log4j-core-2.3.jar" />
+        <element id="file-copy" path="J:/源代码/chapter06/WebContent/WEB-INF/lib/slf4j-api-1.7.22.jar" />
+        <element id="file-copy" path="J:/源代码/chapter06/WebContent/WEB-INF/lib/ant-launcher-1.9.6.jar" />
+        <element id="file-copy" path="J:/源代码/chapter06/WebContent/WEB-INF/lib/commons-logging-1.2.jar" />
+        <element id="file-copy" path="J:/源代码/chapter06/WebContent/WEB-INF/lib/javassist-3.21.0-GA.jar" />
+        <element id="file-copy" path="J:/源代码/chapter06/WebContent/WEB-INF/lib/slf4j-log4j12-1.7.22.jar" />
+        <element id="file-copy" path="J:/源代码/chapter06/WebContent/WEB-INF/lib/mysql-connector-java-5.1.40-bin.jar" />
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,6 @@
+# Project exclude paths
+/ch01/web/WEB-INF/classes/
+/ch02/web/WEB-INF/classes/
+/ch03/web/WEB-INF/classes/
+/ch05/web/WEB-INF/classes/
+/ch06/web/WEB-INF/classes/

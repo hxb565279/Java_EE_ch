@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean id="user1" class="com.hxb.instance.assemble.User">
+        <constructor-arg index="0" value="赵跃凯"/>
+        <constructor-arg index="1" value="哈"/>
+        <constructor-arg index="2" >
+            <list>
+                <value >"11111eee"</value>
+                <value> "疯子"</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="user2" class="com.hxb.instance.assemble.User">
+        <property name="username" value="小心心"/>
+        <property name="password" value="大大"/>
+        <property name="list">
+            <list>
+                <value>"起版费"</value>
+               <value>"冲击"</value>
+            </list>
+        </property>
+
+    </bean>
+
+</beans>
