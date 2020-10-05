@@ -1,12 +1,11 @@
 package com.hxb.test;
 
-import org.apache.ibatis.session.SqlSession;
-import org.junit.Test;
-
 import com.hxb.po.Orders;
 import com.hxb.po.Person;
 import com.hxb.po.User;
 import com.hxb.utils.MybatisUtils;
+import org.apache.ibatis.session.SqlSession;
+import org.junit.Test;
 
 /**
  * Mybatis关联查询映射测试类
@@ -69,7 +68,7 @@ public class MybatisAssociatedTest {
         SqlSession session = MybatisUtils.getSession();
         // 2、查询id为1的订单中的商品信息
         Orders orders = session.selectOne("com.hxb.mapper."
-                + "OrdersMapper.findOrdersWithPorduct", 1);
+                + "OrdersMapper.findOrdersWithProduct", 1);
         // 3、输出查询结果信息
         System.out.println(orders);
         // 4、关闭SqlSession

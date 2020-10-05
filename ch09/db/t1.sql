@@ -56,3 +56,25 @@ insert into tb_orders
 values ('2', '1000012', '1');
 insert into tb_orders
 values ('3', '1000013', '2');
+
+create table tb_product(
+    id INT(32) primary key AUTO_INCREMENT,
+    NAME VARCHAR(32),
+    price DOUBLE
+);
+insert into tb_product values ('1','JAVA基础入门','44.5');
+insert into tb_product values ('2','java web 程序开发入门','38.5');
+insert into tb_product values ('3','SSM框架整合实战','50');
+
+#中间表
+create table tb_ordersitem(
+    id INT(32) PRIMARY KEY AUTO_INCREMENT,
+    orders_id INT(32),
+    product_id INT(32),
+    FOREIGN KEY (orders_id) references tb_orders(id),
+    foreign key (product_id) references tb_product(id)
+);
+
+insert into tb_ordersitem values ('1','1','1');
+insert into tb_ordersitem values ('2','1','3');
+insert into tb_ordersitem values ('3','3','3');
