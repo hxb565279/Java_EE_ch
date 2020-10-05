@@ -11,8 +11,7 @@ public class JdbcTemplateTest {
     public AccountDao Read() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("com/hxb/applicationContext.xml");
         //获取accountDao实例
-        AccountDao accountDao = (AccountDao) applicationContext.getBean("accountDao");
-        return accountDao;
+        return (AccountDao) applicationContext.getBean("accountDao");
     }
 
     //插入
@@ -61,7 +60,7 @@ public class JdbcTemplateTest {
     @Test
     public void findAccountByIdTest() {
         // 执行findAccountById()方法
-        Account account = Read().findAccountByID(1);
+        Account account = Read().findAccountByID(2);
         System.out.println(account);
     }
 
