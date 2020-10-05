@@ -22,7 +22,7 @@
 
     <!--2.配置Mapper的位置 -->
     <mappers>
-        <!--        <mapper resource="com/hxb/mapper/CustomerMapper.xml" />-->
+                <mapper resource="com/hxb/mapper/CustomerMapper.xml"/>
         <mapper resource="com/hxb/mapper/UserMapper.xml"/>
     </mappers>
 </configuration>

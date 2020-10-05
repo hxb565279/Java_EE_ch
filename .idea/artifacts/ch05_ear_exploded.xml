@@ -19,6 +19,7 @@
         <element id="file-copy" path="J:/源代码/chapter05/WebContent/WEB-INF/lib/spring-aspects-4.3.6.RELEASE.jar" />
         <element id="file-copy" path="J:/源代码/chapter05/WebContent/WEB-INF/lib/spring-context-4.3.6.RELEASE.jar" />
         <element id="file-copy" path="J:/源代码/chapter05/WebContent/WEB-INF/lib/spring-expression-4.3.6.RELEASE.jar" />
+        <element id="library" level="module" name="JUnit4" module-name="ch05" />
       </element>
     </root>
   </artifact>

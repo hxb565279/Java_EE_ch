@@ -21,6 +21,7 @@
         <element id="file-copy" path="J:/源代码/chapter07/WebContent/WEB-INF/lib/javassist-3.21.0-GA.jar" />
         <element id="file-copy" path="J:/源代码/chapter07/WebContent/WEB-INF/lib/slf4j-log4j12-1.7.22.jar" />
         <element id="file-copy" path="J:/源代码/chapter07/WebContent/WEB-INF/lib/mysql-connector-java-5.1.40-bin.jar" />
+        <element id="library" level="module" name="JUnit4" module-name="ch07" />
       </element>
     </root>
   </artifact>
