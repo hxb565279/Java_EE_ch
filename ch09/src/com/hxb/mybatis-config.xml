@@ -3,7 +3,7 @@
 		"http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<!-- 引入数据库连接配置文件 -->
-	<properties resource="db.properties"/>
+	<properties resource="com/hxb/db.properties"/>
 
 	<settings>
 		<!-- 打开延迟加载的开关 -->
