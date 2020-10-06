@@ -1,7 +1,5 @@
 package com.hxb.jdbc;
 
-import com.hxb.jdbc.Account;
-import com.hxb.jdbc.AccountDao;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -63,7 +61,7 @@ public class JdbcTemplateTest {
     @Test
     public void findAccountByIdTest() {
         // 执行findAccountById()方法
-        Account account = Read().findAccountByID(1);
+        Account account = Read().findAccountByID(2);
         System.out.println(account);
     }
 
