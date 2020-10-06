@@ -7,4 +7,8 @@
         from mybatis.t_customer
         where id = #{id}
     </select>
+    <select id="addCustomer" parameterType="Customer">
+        insert into mybatis.t_customer (username, jobs, phone)
+        VALUES (#{username}, #{jobs}, #{phone})
+    </select>
 </mapper>

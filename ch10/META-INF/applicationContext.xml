@@ -41,4 +41,6 @@
         <property name="sqlSessionFactory" ref="sqlSessionFactoryBean"/>
         <property name="mapperInterface" value="com.hxb.mapper.CustomerMapper"/>
     </bean>
+    <!--开启扫苗-->
+    <context:component-scan base-package="com.hxb.service"/>
 </beans>
