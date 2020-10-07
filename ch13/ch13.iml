@@ -21,6 +21,13 @@
         </sourceRoots>
       </configuration>
     </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring 应用程序上下文" removed="false">
+          <file>file://$MODULE_DIR$/META-INF/springmvc-config.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/web/WEB-INF/classes" />
@@ -42,5 +49,21 @@
         <jarDirectory url="file://J:/源代码/chapter13/WebContent/WEB-INF/lib" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://J:/源代码/chapter11/WebContent/WEB-INF/lib/commons-logging-1.2.jar!/" />
+          <root url="jar://J:/源代码/chapter11/WebContent/WEB-INF/lib/spring-web-4.3.6.RELEASE.jar!/" />
+          <root url="jar://J:/源代码/chapter11/WebContent/WEB-INF/lib/spring-core-4.3.6.RELEASE.jar!/" />
+          <root url="jar://J:/源代码/chapter11/WebContent/WEB-INF/lib/spring-beans-4.3.6.RELEASE.jar!/" />
+          <root url="jar://J:/源代码/chapter11/WebContent/WEB-INF/lib/spring-webmvc-4.3.6.RELEASE.jar!/" />
+          <root url="jar://J:/源代码/chapter11/WebContent/WEB-INF/lib/spring-context-4.3.6.RELEASE.jar!/" />
+          <root url="jar://J:/源代码/chapter11/WebContent/WEB-INF/lib/spring-expression-4.3.6.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
   </component>
 </module>
