@@ -146,15 +146,22 @@ public class MybatisTest {
         int rows = sqlSession.delete("com.hxb.mapper"
                 + ".CustomerMapper.deleteCustomer", 4);
         // 4.2通过返回结果判断删除操作是否执行成功
-        if(rows > 0){
-            System.out.println("您成功删除了"+rows+"条数据！");
-        }else{
+        if (rows > 0) {
+            System.out.println("您成功删除了" + rows + "条数据！");
+        } else {
             System.out.println("执行删除操作失败！！！");
         }
         // 4.3提交事务
         sqlSession.commit();
         // 5、关闭SqlSession
         sqlSession.close();
+    }
+
+    @Test
+    public void findByPhone() throws IOException {
+        String resource = "mybatis-config.xml";
+        InputStream inputStream = Resources.getResourceAsStream(resource);
+
     }
 
 

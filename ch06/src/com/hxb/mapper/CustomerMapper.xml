@@ -18,16 +18,25 @@
     </select>
     <!-- 更新客户信息 -->
     <update id="updateCustomer" parameterType="com.hxb.po.Customer">
-	    update t_customer set
-	    username=#{username},jobs=#{jobs},phone=#{phone}
-	    where id=#{id}
-	</update>
+        update t_customer
+        set username=#{username},
+            jobs=#{jobs},
+            phone=#{phone}
+        where id = #{id}
+    </update>
 
     <!-- 删除客户信息 -->
     <delete id="deleteCustomer" parameterType="Integer">
-	    delete from t_customer where id=#{id}
-	</delete>
+        delete
+        from t_customer
+        where id = #{id}
+    </delete>
 
+    <select id="findPhone" parameterType="Integer">
+        select *
+        from mybatis.t_customer
+        where phone = #{phone}
+    </select>
 
 
 </mapper>

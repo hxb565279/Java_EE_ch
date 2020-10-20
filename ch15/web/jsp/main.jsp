@@ -1,4 +1,3 @@
-<jsp:useBean id="USER_SESSION" scope="request" type="org.springframework.remoting.jaxws.JaxWsPortClientInterceptor"/>
 <%--
   Created by IntelliJ IDEA.
   User: windows
