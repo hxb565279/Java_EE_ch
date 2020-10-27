@@ -9,120 +9,66 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MybatisTest {
-//    /**
-//     * ¸ù¾İ¿Í»§ĞÕÃûºÍÖ°Òµ×éºÏÌõ¼ş²éÑ¯¿Í»§ĞÅÏ¢ÁĞ±í
-//     */
-//    @Test
-//    public void findCustomerByNameAndJobsTest(){
-//        // Í¨¹ı¹¤¾ßÀàÉú³ÉSqlSession¶ÔÏó
-//        SqlSession session = MybatisUtils.getSession();
-//        // ´´½¨Customer¶ÔÏó£¬·â×°ĞèÒª×éºÏ²éÑ¯µÄÌõ¼ş
-//        Customer customer = new Customer();
-//        customer.setUsername("jack");
-////		customer.setJobs("teacher");
-//        // Ö´ĞĞSqlSessionµÄ²éÑ¯·½·¨£¬·µ»Ø½á¹û¼¯
-//        List<Customer> customers = session.selectList("com.hxb.mapper"
-//                + ".CustomerMapper.findCustomerByNameAndJobs",customer);
-//        // Êä³ö²éÑ¯½á¹ûĞÅÏ¢
-//        for (Customer customer2 : customers) {
-//            // ´òÓ¡Êä³ö½á¹û
-//            System.out.println(customer2);
-//        }
-//        // ¹Ø±ÕSqlSession
-//        session.close();
-//    }
 
-    /**
-     * ¸ù¾İ¿Í»§ĞÕÃû»òÖ°Òµ²éÑ¯¿Í»§ĞÅÏ¢ÁĞ±í
-     */
+
     @Test
     public void findCustomerByNameOrJobsTest() {
-        // Í¨¹ı¹¤¾ßÀàÉú³ÉSqlSession¶ÔÏó
         SqlSession session = MybatisUtils.getSession();
-        // ´´½¨Customer¶ÔÏó£¬·â×°ĞèÒª×éºÏ²éÑ¯µÄÌõ¼ş
         Customer customer = new Customer();
 //	    customer.setUsername("jack");
 //	    customer.setJobs("teacher");
-        // Ö´ĞĞSqlSessionµÄ²éÑ¯·½·¨£¬·µ»Ø½á¹û¼¯
         List<Customer> customers = session.selectList("com.hxb.mapper"
                 + ".CustomerMapper.findCustomerByNameOrJobs", customer);
-        // Êä³ö²éÑ¯½á¹ûĞÅÏ¢
         for (Customer customer2 : customers) {
-            // ´òÓ¡Êä³ö½á¹û
             System.out.println(customer2);
         }
-        // ¹Ø±ÕSqlSession
         session.close();
     }
 
-    /**
-     * ¸üĞÂ¿Í»§
-     */
+
     @Test
     public void updateCustomerTest() {
-        // »ñÈ¡SqlSession
         SqlSession sqlSession = MybatisUtils.getSession();
-        // ´´½¨Customer¶ÔÏó£¬²¢Ïò¶ÔÏóÖĞÌí¼ÓÊı¾İ
         Customer customer = new Customer();
         customer.setId(3);
         customer.setPhone("13311111234");
-        // Ö´ĞĞSqlSessionµÄ¸üĞÂ·½·¨£¬·µ»ØµÄÊÇSQLÓï¾äÓ°ÏìµÄĞĞÊı
         int rows = sqlSession.update("com.hxb.mapper"
                 + ".CustomerMapper.updateCustomer", customer);
-        // Í¨¹ı·µ»Ø½á¹ûÅĞ¶Ï¸üĞÂ²Ù×÷ÊÇ·ñÖ´ĞĞ³É¹¦
         if (rows > 0) {
-            System.out.println("Äú³É¹¦ĞŞ¸ÄÁË" + rows + "ÌõÊı¾İ£¡");
+            System.out.println("æˆåŠŸæ›´æ–°" + rows +"æ¡æ•°æ®");
         } else {
-            System.out.println("Ö´ĞĞĞŞ¸Ä²Ù×÷Ê§°Ü£¡£¡£¡");
+            System.out.println("æ›´æ–°å¤±è´¥");
         }
-        // Ìá½»ÊÂÎñ
         sqlSession.commit();
-        // ¹Ø±ÕSqlSession
         sqlSession.close();
     }
 
-    /**
-     * ¸ù¾İ¿Í»§±àºÅÅúÁ¿²éÑ¯¿Í»§ĞÅÏ¢
-     */
+
     @Test
     public void findCustomerByIdsTest() {
-        // »ñÈ¡SqlSession
         SqlSession session = MybatisUtils.getSession();
-        // ´´½¨List¼¯ºÏ£¬·â×°²éÑ¯id
         List<Integer> ids = new ArrayList<Integer>();
         ids.add(1);
         ids.add(2);
-        // Ö´ĞĞSqlSessionµÄ²éÑ¯·½·¨£¬·µ»Ø½á¹û¼¯
         List<Customer> customers = session.selectList("com.hxb.mapper"
                 + ".CustomerMapper.findCustomerByIds", ids);
-        // Êä³ö²éÑ¯½á¹ûĞÅÏ¢
         for (Customer customer : customers) {
-            // ´òÓ¡Êä³ö½á¹û
             System.out.println(customer);
         }
-        // ¹Ø±ÕSqlSession
         session.close();
     }
 
-    /**
-     * bindÔªËØµÄÊ¹ÓÃ£º¸ù¾İ¿Í»§ÃûÄ£ºı²éÑ¯¿Í»§ĞÅÏ¢
-     */
+
     @Test
     public void findCustomerByNameTest() {
-        // Í¨¹ı¹¤¾ßÀàÉú³ÉSqlSession¶ÔÏó
         SqlSession session = MybatisUtils.getSession();
-        // ´´½¨Customer¶ÔÏó£¬·â×°²éÑ¯µÄÌõ¼ş
         Customer customer = new Customer();
         customer.setUsername("j");
-        // Ö´ĞĞsqlSessionµÄ²éÑ¯·½·¨£¬·µ»Ø½á¹û¼¯
         List<Customer> customers = session.selectList("com.hxb.mapper"
                 + ".CustomerMapper.findCustomerByName", customer);
-        // Êä³ö²éÑ¯½á¹ûĞÅÏ¢
         for (Customer customer2 : customers) {
-            // ´òÓ¡Êä³ö½á¹û
             System.out.println(customer2);
         }
-        // ¹Ø±ÕSqlSession
         session.close();
     }
 }

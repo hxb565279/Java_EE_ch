@@ -8,7 +8,7 @@
         <result property="age" column="t_age"/>
     </resultMap>
     <select id="findAllUser" resultMap="resultMap">
-		select * from t_user
+		select * from mybatis.t_user
 	</select>
 
 </mapper>

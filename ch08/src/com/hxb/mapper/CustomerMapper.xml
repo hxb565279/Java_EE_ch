@@ -42,7 +42,7 @@
     <!--<choose>(<when>、<otherwise>)元素使用 -->
     <select id="findCustomerByNameOrJobs" parameterType="com.hxb.po.Customer"
             resultType="com.hxb.po.Customer">
-        select * from t_customer where 1=1
+        select * from mybatis.t_customer where 1=1
         <choose>
             <when test="username !=null and username !=''">
                 and username like concat('%',#{username}, '%')
@@ -58,7 +58,7 @@
 
     <!-- <set>元素 -->
     <update id="updateCustomer" parameterType="com.hxb.po.Customer">
-        update t_customer
+        update mybatis.t_customer
         <set>
             <if test="username !=null and username !=''">
                 username=#{username},
@@ -76,7 +76,7 @@
     <!--<foreach>元素使用 -->
     <select id="findCustomerByIds" parameterType="List"
             resultType="com.hxb.po.Customer">
-        select * from t_customer where id in
+        select * from mybatis.t_customer where id in
         <foreach item="id" index="index" collection="list" open="("
                  separator="," close=")">
             #{id}
@@ -88,7 +88,7 @@
             resultType="com.hxb.po.Customer">
         <!--_parameter.getUsername()也可直接写成传入的字段属性名，即username -->
         <bind name="username" value="'%'+username+'%'"/>
-        select * from t_customer
+        select * from mybatis.t_customer
         where
         username like #{username}
     </select>

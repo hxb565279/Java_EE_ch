@@ -17,8 +17,10 @@ public class DataConverter implements Converter<String, Date> {
             return sdf.parse(source);
         } catch (ParseException e) {
             e.printStackTrace();
-            System.out.println("转换失败");
+            throw new IllegalArgumentException(
+                      "无效"+dataPattern
+            );
         }
-        return new Date();
+
     }
 }
