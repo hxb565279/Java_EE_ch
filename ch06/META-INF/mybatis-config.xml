@@ -8,9 +8,9 @@
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <property name="url"
-                          value="jdbc:mysql://localhost:3306/mybatis?charset=utf8&amp;useSSL=false"/>
+                          value="jdbc:mysql://49.233.223.51:3306/mybatis?charset=utf8&amp;useSSL=false"/>
                 <property name="username" value="root"/>
-                <property name="password" value="123456"/>
+                <property name="password" value="AaA123456"/>
             </dataSource>
         </environment>
     </environments>

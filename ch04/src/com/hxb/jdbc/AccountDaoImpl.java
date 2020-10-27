@@ -18,7 +18,7 @@ public class AccountDaoImpl implements AccountDao {
     @Override
     public int addAccount(Account account) {
         //定义sql语句
-        String SQL = "insert into account(username,balance) values(?,?)";
+        String SQL = "insert into  spring.account (username,balance) values(?,?)";
         //定义数组存储sql语句参数
         Object[] objects = new Object[]{
                 account.getUsername(), account.getBalance()
@@ -32,7 +32,7 @@ public class AccountDaoImpl implements AccountDao {
     @Override
     public int updateAccount(Account account) {
         //定义sql语句
-        String sql = "update account  set username=? ,balance =? where id=?";
+        String sql = "update spring.account  set username=? ,balance =? where id=?";
         //存放sql语句参数
         Object[] objects = new Object[]{
                 account.getUsername(), account.getBalance(), account.getId()
@@ -46,7 +46,7 @@ public class AccountDaoImpl implements AccountDao {
     @Override
     public int deleteAccount(int id) {
         //定义sql语句
-        String sql = "delete from account where id =?";
+        String sql = "delete from spring.account  where id =?";
         //执行
         int num3 = this.jdbcTemplate.update(sql, id);
         return num3;
@@ -56,7 +56,7 @@ public class AccountDaoImpl implements AccountDao {
     @Override
     public Account findAccountByID(int id) {
         //定义sql语句
-        String SQL = "select * from account where id = ?";
+        String SQL = "select * from spring.account where id = ?";
         //创建一个BeanPropertyRomMapper对象
         RowMapper<Account> rowMapper = new BeanPropertyRowMapper<>(Account.class);
         return this.jdbcTemplate.queryForObject(SQL, rowMapper, id);
@@ -66,7 +66,7 @@ public class AccountDaoImpl implements AccountDao {
     @Override
     public List<Account> findAllAccount() {
       //定义sql语句
-        String sql = "select * from account";
+        String sql = "select * from spring.account";
         //创建一个BeanProperRomMapper对象
         RowMapper<Account> rowMapper = new BeanPropertyRowMapper<>(Account.class);
         //执行,返回RomMapper结果
