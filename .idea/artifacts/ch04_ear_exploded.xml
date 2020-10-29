@@ -16,6 +16,14 @@
         <element id="file-copy" path="J:/源代码/chapter04/WebContent/WEB-INF/lib/spring-context-4.3.6.RELEASE.jar" />
         <element id="file-copy" path="J:/源代码/chapter04/WebContent/WEB-INF/lib/spring-expression-4.3.6.RELEASE.jar" />
         <element id="library" level="module" name="JUnit4" module-name="ch04" />
+        <element id="file-copy" path="D:/源代码/chapter04/WebContent/WEB-INF/lib/commons-logging-1.2.jar" />
+        <element id="file-copy" path="D:/源代码/chapter04/WebContent/WEB-INF/lib/spring-tx-4.3.6.RELEASE.jar" />
+        <element id="file-copy" path="D:/源代码/chapter04/WebContent/WEB-INF/lib/spring-core-4.3.6.RELEASE.jar" />
+        <element id="file-copy" path="D:/源代码/chapter04/WebContent/WEB-INF/lib/spring-jdbc-4.3.6.RELEASE.jar" />
+        <element id="file-copy" path="D:/源代码/chapter04/WebContent/WEB-INF/lib/mysql-connector-java-5.1.8.jar" />
+        <element id="file-copy" path="D:/源代码/chapter04/WebContent/WEB-INF/lib/spring-beans-4.3.6.RELEASE.jar" />
+        <element id="file-copy" path="D:/源代码/chapter04/WebContent/WEB-INF/lib/spring-context-4.3.6.RELEASE.jar" />
+        <element id="file-copy" path="D:/源代码/chapter04/WebContent/WEB-INF/lib/spring-expression-4.3.6.RELEASE.jar" />
       </element>
     </root>
   </artifact>

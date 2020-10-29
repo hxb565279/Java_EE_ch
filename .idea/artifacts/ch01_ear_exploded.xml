@@ -6,6 +6,13 @@
       <element id="directory" name="web.war">
         <element id="artifact" artifact-name="ch01:war exploded" />
       </element>
+      <element id="directory" name="lib">
+        <element id="file-copy" path="D:/源代码/chapter01/WebContent/WEB-INF/lib/commons-logging-1.2.jar" />
+        <element id="file-copy" path="D:/源代码/chapter01/WebContent/WEB-INF/lib/spring-core-4.3.6.RELEASE.jar" />
+        <element id="file-copy" path="D:/源代码/chapter01/WebContent/WEB-INF/lib/spring-beans-4.3.6.RELEASE.jar" />
+        <element id="file-copy" path="D:/源代码/chapter01/WebContent/WEB-INF/lib/spring-context-4.3.6.RELEASE.jar" />
+        <element id="file-copy" path="D:/源代码/chapter01/WebContent/WEB-INF/lib/spring-expression-4.3.6.RELEASE.jar" />
+      </element>
     </root>
   </artifact>
 </component>
